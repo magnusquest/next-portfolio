@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BlogPostCard from "./blog/BlogPostCard";
+import BlogPostCard from "../components/BlogPostCard";
 
 export default function Home() {
   return (
