@@ -7,7 +7,7 @@ const testPost = {
   },
 };
 
-export default function CardLayout() {
+export default function BlogPosts() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       Hello CardLayout.

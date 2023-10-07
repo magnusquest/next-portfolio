@@ -7,9 +7,8 @@ import IntroHero from "@/components/IntroHero";
 export default async function Home() {
   const posts = await getPosts();
   return (
-    <main className="flex flex-col items-center p-24">
-      <IntroHero />
-      <div id="blog">
+    <main className="items-center p-24">
+      <div id="blog" className="flex flex-col space-y-10">
         {posts.map((post: Post) => (
           <Card key={post.id} title={post.title} content={post.content.text} />
         ))}
