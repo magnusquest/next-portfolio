@@ -6,7 +6,7 @@ export interface Post {
   }
   publishDate?: string;
   slug?: string;
-  coverPhoto?: {
+  coverPhoto: {
     id: string;
     url: string;
   };

@@ -22,11 +22,6 @@ export default function AppHeader() {
   return (
     <div className="flex justify-center border-b-2 border-gray-400 fixed top-0 w-full bg-inherit">
       <header className="items-center p-4 flex-col align-middle">
-        <div className="flex justify-center">
-          <Link href="/" className="text-lg font-bold flex justify-center">
-            Martin Cordero - Software Engineer
-          </Link>
-        </div>
         <ul className="flex gap-x-24 list-none">
           {navLinks.map((nav: { id: number; name: string; href: string }) => (
             <li key={nav.id}>

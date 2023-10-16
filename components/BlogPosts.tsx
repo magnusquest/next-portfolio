@@ -1,17 +1,17 @@
+import { Post } from "@/models/types";
 import Card from "./Card";
+import { getPosts } from "@/services/graphqlClient";
 
-const testPost = {
-  title: "Test Post",
-  content: {
-    text: "Hello World",
-  },
-};
+export default async function BlogPosts() {
+  const posts = await getPosts();
 
-export default function BlogPosts() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hello CardLayout.
-      <Card title={testPost.title} content={testPost.content.text} />
-    </main>
+    <>
+      <div id="blog" className="flex justify-evenly pt-20">
+        {posts.map((post: Post) => (
+          <Card {...post} key={post.id} />
+        ))}
+      </div>
+    </>
   );
 }
