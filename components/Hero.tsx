@@ -12,6 +12,17 @@ interface props {
   left: boolean;
 }
 
+const links = [
+  {
+    image: "/linkedin.png",
+    link: "",
+  },
+  {
+    image: "/github.png",
+    link: "",
+  },
+];
+
 export default function Hero(props: any) {
   var image = (
     <Image
@@ -25,7 +36,7 @@ export default function Hero(props: any) {
 
   return (
     <main id="hero">
-      <div className="flex items-center justify-center space-x-20 w-full pb-40">
+      <div className="flex items-center justify-center space-x-20 w-full pb-20">
         {props.left ? image : null}
         <div>
           <h1>{props.header}</h1>

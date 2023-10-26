@@ -7,7 +7,9 @@ export default async function BlogPosts() {
 
   return (
     <>
-      <div id="blog" className="flex justify-evenly pt-20">
+      <h1>Recent Blog Posts</h1>
+      <hr />
+      <div id="blog" className="flex justify-evenly pt-5">
         {posts.map((post: Post) => (
           <Card {...post} key={post.id} />
         ))}

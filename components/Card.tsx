@@ -1,12 +1,20 @@
-import Image from "next/image";
 import { Post } from "@/models/types";
 
 export default function Card(post: Post) {
   return (
-    <div className="card space-y-4 hover:bg-slate-900 w-full">
-      <h2 className="card-title">{post.title}</h2>
-      <p className="card-description">{post.content.text}</p>
-      {/* <Image src={post.coverPhoto.url} alt="cover photo" /> */}
+    <div className="relative w-64 h-32 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
+      <div
+        className="w-full h-full bg-cover bg-center bg-fixed transform hover:scale-110 transition-all duration-300 ease-in-out"
+        style={{
+          backgroundImage: `url(${post.coverPhoto.url})`,
+        }}
+      >
+        <div className="w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="text-center px-2">
+            <p className="text-white text-lg font-semibold">{post.title}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

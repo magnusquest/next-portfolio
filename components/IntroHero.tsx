@@ -10,7 +10,7 @@ export default function IntroHero() {
       height={400}
       header="Hi, I'm Martin."
       content="Full Stack Software Engineer by day ... and by night."
-      content2=""
+      content2="I also enjoy teaching robots how to do your job."
       left={true}
     />
   );
