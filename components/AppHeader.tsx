@@ -2,6 +2,11 @@ import Link from "next/link";
 
 const navLinks = [
   {
+    id: 0,
+    name: "Home",
+    href: "/",
+  },
+  {
     id: 1,
     name: "Blog",
     href: "#blog",

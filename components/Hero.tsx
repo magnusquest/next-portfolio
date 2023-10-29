@@ -10,18 +10,12 @@ interface props {
   content: string;
   content2?: string;
   left: boolean;
+  links?: {
+    image: string;
+    link: string;
+    alt: string;
+  }[];
 }
-
-const links = [
-  {
-    image: "/linkedin.png",
-    link: "",
-  },
-  {
-    image: "/github.png",
-    link: "",
-  },
-];
 
 export default function Hero(props: any) {
   var image = (
@@ -34,6 +28,18 @@ export default function Hero(props: any) {
     />
   );
 
+  var imageLink = (link: any) => (
+    <a href={link.link} className="pr-4">
+      <Image
+        key={link.alt}
+        src={link.image}
+        alt={link.alt}
+        width={40}
+        height={40}
+      />
+    </a>
+  );
+
   return (
     <main id="hero">
       <div className="flex items-center justify-center space-x-20 w-full pb-20">
@@ -43,6 +49,14 @@ export default function Hero(props: any) {
           {props.content}
           <br />
           {props.content2}
+          <div className="flex pt-8">
+            {!props.links
+              ? null
+              : props.links.map(
+                  (link: { image: string; link: string; alt: string }) =>
+                    imageLink(link)
+                )}
+          </div>
         </div>
         {!props.left ? image : null}
       </div>
