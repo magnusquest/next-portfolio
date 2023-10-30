@@ -29,14 +29,8 @@ export default function Hero(props: any) {
   );
 
   var imageLink = (link: any) => (
-    <a href={link.link} className="pr-4">
-      <Image
-        key={link.alt}
-        src={link.image}
-        alt={link.alt}
-        width={40}
-        height={40}
-      />
+    <a href={link.link} key={link.alt} className="pr-4">
+      <Image src={link.image} alt={link.alt} width={40} height={40} />
     </a>
   );
 

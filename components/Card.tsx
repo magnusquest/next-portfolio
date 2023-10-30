@@ -2,7 +2,7 @@ import { Post } from "@/models/types";
 
 export default function Card(post: Post) {
   return (
-    <div className="relative w-64 h-32 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
+    <div className="w-64 h-32 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
       <div
         className="w-full h-full bg-cover bg-center bg-fixed transform hover:scale-110 transition-all duration-300 ease-in-out"
         style={{
