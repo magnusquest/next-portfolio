@@ -7,22 +7,18 @@ export default async function SingleBlogPost({
 }: {
   params: { slug: string };
 }) {
-  const post: Post = await getSinglePost("test");
+  const post: Post = await getSinglePost(params.slug);
   return (
-    <div className="container mx-auto px-4 py-20">
+    <div className="flex flex-col items-center justify-center px-40 pt-20">
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-      <div className="mb-8">
-        <Image
-          src={post.coverPhoto.url}
-          alt="cover photo"
-          width={800}
-          height={400}
-        />
-      </div>
-      <div className="prose max-w-none">
-        {post.content.text}
-        {params.slug}
-      </div>
+      <Image
+        className="rounded-lg pb-5"
+        src={post.coverPhoto.url}
+        alt="cover photo"
+        width={800}
+        height={400}
+      />
+      <h2 className="pb-20">{post.content.text.replace(/\\n/g, "")}</h2>
     </div>
   );
 }

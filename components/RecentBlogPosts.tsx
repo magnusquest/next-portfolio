@@ -1,10 +1,10 @@
 import { Post } from "@/models/types";
 import Card from "./Card";
-import { getPosts } from "@/services/graphqlClient";
+import { getRecentPosts } from "@/services/graphqlClient";
 import Link from "next/link";
 
 export default async function RecentBlogPosts() {
-  const posts = await getPosts();
+  const posts = await getRecentPosts();
 
   return (
     <div className={"pb-10"}>

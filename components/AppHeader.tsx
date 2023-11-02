@@ -9,18 +9,18 @@ const navLinks = [
   {
     id: 1,
     name: "Blog",
-    href: "#blog",
+    href: "/blog",
   },
   {
     id: 2,
     name: "Projects",
     href: "#projects",
   },
-  {
-    id: 3,
-    name: "Develup",
-    href: "#develup",
-  },
+  // {
+  //   id: 3,
+  //   name: "Develup",
+  //   href: "#develup",
+  // },
 ];
 
 export default function AppHeader() {

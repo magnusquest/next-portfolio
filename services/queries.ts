@@ -26,9 +26,9 @@ export const getPostsQuery = gql`
   }
 `;
 
-export const getSinglePostQuery = gql`
+export const getSinglePostQuery = (slug: string) => gql`
 query Post {
-  post(where: {id: "clmm8aqlv1u3j0ak3vqe3ej7v"}){
+  post(where: {slug: "${slug}"}) {
       id
       publishDate
       slug
@@ -50,4 +50,30 @@ query Post {
       }
     }
   }
+`;
+
+export const getRecentPostsQuery = gql`
+query RecentPosts {
+  posts(orderBy: publishDate_DESC, first: 3) {
+    id
+    publishDate
+    slug
+    title
+    coverPhoto {
+      id
+      url
+    }
+    author {
+      id
+      name
+      avatar {
+        id
+        url
+      }
+    }
+    content {
+      text
+    }
+  }
+}
 `;

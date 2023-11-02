@@ -1,7 +1,7 @@
 import { getPosts } from "@/services/graphqlClient";
 import IntroHero from "@/components/IntroHero";
 import RecentBlogPosts from "@/components/RecentBlogPosts";
-import Projects from "@/components/Projects";
+import RecentProjects from "@/components/RecentProjects";
 
 export default async function Home() {
   const posts = await getPosts();
@@ -9,7 +9,7 @@ export default async function Home() {
     <main className="flex-col items-center px-40 pt-40">
       <IntroHero />
       <RecentBlogPosts />
-      <Projects />
+      <RecentProjects />
     </main>
   );
 }
