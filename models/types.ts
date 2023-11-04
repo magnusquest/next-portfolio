@@ -1,4 +1,4 @@
-export interface Post {
+export interface Content {
   id: string;
   title: string;
   content: {
@@ -10,12 +10,12 @@ export interface Post {
     id: string;
     url: string;
   };
-  author?: {
-    id: string;
-    name: string;
-    avatar: {
-      id: string;
-      url: string;
-    };
-  };
+  // author?: {
+  //   id: string;
+  //   name: string;
+  //   avatar: {
+  //     id: string;
+  //     url: string;
+  //   };
+  // };
 }

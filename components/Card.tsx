@@ -1,7 +1,7 @@
-import { Post } from "@/models/types";
+import { Content } from "@/models/types";
 import Link from "next/link";
 
-export default function Card(post: Post) {
+export default function Card(post: Content) {
   return (
     <Link className="w-min" href={`/blog/${post.slug}`}>
       <div className="w-64 h-32 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">

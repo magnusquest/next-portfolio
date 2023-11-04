@@ -1,23 +1,14 @@
 import { gql } from "graphql-request";
 
-export const getPostsQuery = gql`
-  query Posts {
-    posts {
+export const getAllQuery = (model: string) => gql`
+  query ${model} {
+    ${model}s {
       id
-      publishDate
       slug
       title
       coverPhoto {
         id
         url
-      }
-      author {
-        id
-        name
-        avatar {
-          id
-          url
-        }
       }
       content {
         text
@@ -26,24 +17,15 @@ export const getPostsQuery = gql`
   }
 `;
 
-export const getSinglePostQuery = (slug: string) => gql`
-query Post {
-  post(where: {slug: "${slug}"}) {
+export const getSingleQuery = (model: string, slug: string) => gql`
+query ${model} {
+  ${model}(where: {slug: "${slug}"}) {
       id
-      publishDate
       slug
       title
       coverPhoto {
         id
         url
-      }
-      author {
-        id
-        name
-        avatar {
-          id
-          url
-        }
       }
       content {
         text
@@ -52,24 +34,15 @@ query Post {
   }
 `;
 
-export const getRecentPostsQuery = gql`
-query RecentPosts {
-  posts(orderBy: publishDate_DESC, first: 3) {
+export const getRecentQuery = (model: string) => gql`
+query Recent${model}s {
+  ${model}s(orderBy: publishDate_DESC, first: 3) {
     id
-    publishDate
     slug
     title
     coverPhoto {
       id
       url
-    }
-    author {
-      id
-      name
-      avatar {
-        id
-        url
-      }
     }
     content {
       text

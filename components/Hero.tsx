@@ -1,22 +1,5 @@
 import Image from "next/image";
 
-interface props {
-  id: string;
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  header: string;
-  content: string;
-  content2?: string;
-  left: boolean;
-  links?: {
-    image: string;
-    link: string;
-    alt: string;
-  }[];
-}
-
 export default function Hero(props: any) {
   var image = (
     <Image
@@ -35,25 +18,23 @@ export default function Hero(props: any) {
   );
 
   return (
-    <main id="hero">
-      <div className="flex items-center justify-center space-x-20 w-full pb-20">
-        {props.left ? image : null}
-        <div>
-          <h1>{props.header}</h1>
-          {props.content}
-          <br />
-          {props.content2}
-          <div className="flex pt-8">
-            {!props.links
-              ? null
-              : props.links.map(
-                  (link: { image: string; link: string; alt: string }) =>
-                    imageLink(link)
-                )}
-          </div>
+    <div className="flex items-center justify-center space-x-20 mb-20">
+      {props.left ? image : null}
+      <div>
+        <h1>{props.header}</h1>
+        {props.content}
+        <br />
+        {props.content2}
+        <div className="flex pt-8">
+          {!props.links
+            ? null
+            : props.links.map(
+                (link: { image: string; link: string; alt: string }) =>
+                  imageLink(link)
+              )}
         </div>
-        {!props.left ? image : null}
       </div>
-    </main>
+      {!props.left ? image : null}
+    </div>
   );
 }

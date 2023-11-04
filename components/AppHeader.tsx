@@ -14,13 +14,8 @@ const navLinks = [
   {
     id: 2,
     name: "Projects",
-    href: "#projects",
+    href: "/projects",
   },
-  // {
-  //   id: 3,
-  //   name: "Develup",
-  //   href: "#develup",
-  // },
 ];
 
 export default function AppHeader() {

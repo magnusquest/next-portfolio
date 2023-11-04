@@ -1,4 +1,4 @@
-import { Post } from "@/models/types";
+import { Content } from "@/models/types";
 import Card from "./Card";
 import { getRecentPosts } from "@/services/graphqlClient";
 import Link from "next/link";
@@ -16,7 +16,7 @@ export default async function RecentBlogPosts() {
       </div>
       <hr />
       <div id="blog" className="flex justify-evenly pt-5">
-        {posts.map((post: Post) => (
+        {posts.map((post: Content) => (
           <Card {...post} key={post.id} />
         ))}
       </div>
