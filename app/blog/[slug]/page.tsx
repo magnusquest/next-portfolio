@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Post } from "@/models/types";
+import { Content } from "@/models/types";
 import { getSinglePost } from "@/services/graphqlClient";
 
 export default async function SingleBlogPost({
@@ -7,7 +7,7 @@ export default async function SingleBlogPost({
 }: {
   params: { slug: string };
 }) {
-  const post: Post = await getSinglePost(params.slug);
+  const post: Content = await getSinglePost(params.slug);
   return (
     <div className="flex flex-col items-center justify-center px-40 pt-20">
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
