@@ -18,11 +18,14 @@ export default function Hero(props: any) {
   );
 
   return (
-    <div className="flex items-center justify-center space-x-20 mb-20">
+    <div className="flex items-center justify-center space-x-20 mb-20 px-6 pt-4">
       {props.left ? image : null}
       <div>
         <h1>{props.header}</h1>
-        {props.content}
+        <div
+          className="text-container"
+          dangerouslySetInnerHTML={{ __html: props.content }}
+        ></div>
         <br />
         {props.content2}
         <div className="flex pt-8">

@@ -11,7 +11,7 @@ export const getAllQuery = (model: string) => gql`
         url
       }
       content {
-        text
+        html
       }
     }
   }
@@ -28,7 +28,7 @@ query ${model} {
         url
       }
       content {
-        text
+        html
       }
     }
   }
@@ -45,7 +45,7 @@ query Recent${model}s {
       url
     }
     content {
-      text
+      html
     }
   }
 }

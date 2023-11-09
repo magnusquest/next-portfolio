@@ -11,7 +11,7 @@ export default function ProjectHero(props: any) {
         width={200}
         height={200}
         header={props.title}
-        content={props.content.text.replace(/\\n/g, "")}
+        content={props.content.html.replace(/\\n/g, "")}
         left={false}
       />
     </Link>

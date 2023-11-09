@@ -2,7 +2,7 @@ export interface Content {
   id: string;
   title: string;
   content: {
-    text: string;
+    html: string;
   }
   publishDate?: string;
   slug?: string;

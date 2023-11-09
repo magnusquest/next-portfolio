@@ -18,7 +18,10 @@ export default async function Project({
         width={400}
         height={400}
       />
-      <h2 className="pb-20">{project.content.text.replace(/\\n/g, "")}</h2>
+      <div
+        className="pb-20 text-container"
+        dangerouslySetInnerHTML={{ __html: project.content.html }}
+      ></div>
     </div>
   );
 }
