@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import AppHeader from "@/components/AppHeader";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <AppHeader />
         {children}
+        <Analytics />
       </body>
     </html>
   );
