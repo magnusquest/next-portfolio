@@ -28,10 +28,7 @@ export default function Hero(props: any) {
               className="text-container"
               dangerouslySetInnerHTML={{ __html: props.content }}
             ></div>
-            <div
-              className="text-container"
-              dangerouslySetInnerHTML={{ __html: props.content2 }}
-            ></div>
+            <div className="text-container">{props.content2}</div>
           </div>
           <div className="flex sm:pt-4 ml-auto lg:w-full">
             {!props.links
