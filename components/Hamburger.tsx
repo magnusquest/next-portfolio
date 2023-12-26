@@ -11,7 +11,7 @@ const navLinks = [
   {
     id: 1,
     name: "Blog",
-    href: "/blog",
+    href: "#blog",
   },
   {
     id: 2,

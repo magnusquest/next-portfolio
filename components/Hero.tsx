@@ -7,7 +7,7 @@ export default function Hero(props: any) {
       alt={props.alt}
       width={props.width}
       height={props.height}
-      className="object-cover rounded-full lg:w-3/5 w-3/4 md:w-2/3 m-auto"
+      className="object-cover rounded-full xl:w-2/5 lg:w-3/5 w-3/4 md:w-2/3 m-auto lg:m-12"
     />
   );
 
@@ -20,7 +20,7 @@ export default function Hero(props: any) {
   return (
     <div className="w-full lg:flex justify-center mb-6 mt-6 px-6 pt-4 sm:space-x-10">
       {props.left ? image : null}
-      <div className="flex-col lg:pt-32 sm:pt-8 pt-2">
+      <div className="flex-col lg:pt-32 xl:pt-48 sm:pt-8 pt-2">
         <h1>{props.header}</h1>
         <div className="flex lg:flex-col justify-between items-center">
           <div className="flex-col">

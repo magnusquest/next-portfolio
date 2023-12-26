@@ -7,7 +7,7 @@ export default async function RecentBlogPosts() {
   const posts = await getRecentPosts();
 
   return (
-    <div className="pb-10">
+    <div>
       <div className="flex justify-between items-center">
         <h1>Recent Blog Posts</h1>
         <Link href="/blog">
