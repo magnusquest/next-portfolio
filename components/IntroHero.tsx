@@ -9,8 +9,8 @@ export default function IntroHero() {
       width={400}
       height={400}
       header="Hi, I'm Martin."
-      content="Full Stack Software Engineer by day ... and by night."
-      content2="I also enjoy teaching robots how to do your job."
+      content="Full Stack Software Engineer"
+      content2="Check out my work below!"
       left={true}
       links={[
         {
