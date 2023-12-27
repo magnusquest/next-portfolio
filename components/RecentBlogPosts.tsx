@@ -7,7 +7,7 @@ export default async function RecentBlogPosts() {
   const posts = await getRecentPosts();
 
   return (
-    <div>
+    <div id="blog">
       <div className="flex justify-between items-center">
         <h1>Recent Blog Posts</h1>
         <Link href="/blog">
@@ -15,7 +15,7 @@ export default async function RecentBlogPosts() {
         </Link>
       </div>
       <hr />
-      <div id="blog" className="sm:flex sm:justify-evenly pt-5">
+      <div className="sm:flex sm:justify-evenly pt-5">
         {posts.map((post: Content) => (
           <Card {...post} key={post.id} />
         ))}
