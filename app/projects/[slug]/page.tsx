@@ -9,7 +9,7 @@ export default async function Project({
 }) {
   const project: Content = await getSingleProject(params.slug);
   return (
-    <div className="flex flex-col items-center justify-center px-40 pt-20">
+    <div className="flex justify-center items-stretch px-6 md:px-24 lg:px-32 xl:px-16 2xl:px-40 pt-32">
       <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
       <Image
         className="rounded-lg pb-5"
