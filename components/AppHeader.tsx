@@ -9,7 +9,7 @@ export default function AppHeader() {
           <ul className="flex gap-x-24 list-none">
             {navLinks.map((nav: { id: number; name: string; href: string }) => (
               <li key={nav.id}>
-                <Link href={nav.href} className="text-lg font-bold">
+                <Link href={nav.href}>
                   <h2>{nav.name}</h2>
                 </Link>
               </li>

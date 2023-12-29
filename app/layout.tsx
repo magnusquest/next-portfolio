@@ -4,6 +4,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Hamburger from "@/components/Hamburger";
+import Button from "@/components/Button";
 
 const inter = Inter({ subsets: ["latin"] });
 
