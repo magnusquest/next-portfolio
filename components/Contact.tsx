@@ -5,24 +5,50 @@ export default function Contact() {
         <h1>Contact</h1>
       </div>
       <hr />
-      <div id="contact" className="flex justify-evenly pt-5">
+      <div id="contact" className="flex justify-center pt-5">
         <form className="w-full max-w-lg">
-          <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="flex flex-col -mx-3 mb-6">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-first-name"
+              className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+              htmlFor="grid-name"
             >
-              First Name
+              Name
             </label>
             <input
-              className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              id="grid-first-name"
+              className="bg-gray-900 text-white border rounded py-3 px-4 mb-3 leading-tight focus:outline-nona"
+              id="grid-name"
               type="text"
-              placeholder="Jane"
+              placeholder="Jane Doe"
             />
-            <p className="text-red-500 text-xs italic">
-              Please fill out this field.
-            </p>
+            <label
+              className="block uppercase tracking-wide text-wh900 text-xs font-bold mb-2"
+              htmlFor="grid-email"
+            >
+              Email
+            </label>
+            <input
+              className="bg-gray-900 text-white border rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
+              id="grid-email"
+              type="email"
+              placeholder="jane.doe@example.com"
+            />
+            <label
+              className="block uppercase tracking-wide text-wh900 text-xs font-bold mb-2"
+              htmlFor="grid-message"
+            >
+              Message
+            </label>
+            <textarea
+              className="bg-gray-900 text-white border rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
+              id="grid-message"
+              placeholder="Enter your message here"
+            />
+            <button
+              className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Send!
+            </button>
           </div>
         </form>
       </div>
