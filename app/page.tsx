@@ -10,8 +10,8 @@ export default async function Home() {
     <main className="flex-col items-center md:px-24 md:pt-24 sm:px-20 sm:pt-20 px-10 pt-10 space-y-10">
       <IntroHero />
       <RecentBlogPosts />
-      {/* <RecentProjects /> */}
-      <Contact />
+      <RecentProjects />
+      {/* <Contact /> */}
     </main>
   );
 }

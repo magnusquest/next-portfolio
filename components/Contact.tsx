@@ -1,4 +1,10 @@
 export default function Contact() {
+  const initialState = {
+    name: "",
+    email: "",
+    message: "",
+  };
+
   return (
     <div className="pb-10">
       <div className="flex justify-between items-center">
