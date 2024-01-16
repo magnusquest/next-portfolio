@@ -1,5 +1,5 @@
 import { Content } from "@/models/types";
-import Card from "./Card";
+import Card from "@/components/Card";
 import { getRecentPosts } from "@/services/graphqlClient";
 import Link from "next/link";
 

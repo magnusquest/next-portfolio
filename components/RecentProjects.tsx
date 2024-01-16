@@ -1,16 +1,27 @@
-import ContentHero from "@/components/ProjectHero";
+import ProjectHero from "@/components/ProjectHero";
 import { getRecentProjects } from "@/services/graphqlClient";
+import Link from "next/link";
+import Card from "@/components/Card";
+import { Content } from "@/models/types";
 
 export default async function RecentProjects() {
   const projects = await getRecentProjects();
   return (
-    <div className={"pb-10"}>
-      <h1>Recent Projects</h1>
-      <hr />
-      <div id="blog" className="flex-col justify-evenly pt-5">
-        {/* do a mapping */}
-        <ContentHero {...projects[0]} />
+    <>
+      <div id="projects">
+        <div className="flex justify-between items-center">
+          <h1>Recent Projects</h1>
+          <Link href="/projects">
+            <h2 className="text-blue-500 hover:text-blue-700">All Projects</h2>
+          </Link>
+        </div>
+        <hr />
+        <div className="sm:flex sm:justify-evenly pt-5">
+          {projects.map((project: Content) => (
+            <ProjectHero {...project} key={project.id} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
