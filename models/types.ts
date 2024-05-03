@@ -10,6 +10,7 @@ export interface Content {
     id: string;
     url: string;
   };
+  link?: string;
   // author?: {
   //   id: string;
   //   name: string;

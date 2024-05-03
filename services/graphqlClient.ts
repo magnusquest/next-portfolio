@@ -1,5 +1,5 @@
 import { GraphQLClient } from "graphql-request";
-import { getAllQuery, getRecentQuery, getSingleQuery } from "@/services/queries";
+import { getAllQuery, getProjectsQuery, getRecentProjectsQuery, getRecentQuery, getSingleProjectQuery, getSingleQuery } from "@/services/queries";
 import { Content } from "@/models/types";
 
 const graphcms = new GraphQLClient(process.env.GRAPHCMS_URL as string);
@@ -23,16 +23,16 @@ export async function getRecentPosts() {
 
 // Projects
 export async function getProjects() {
-      const res: { projects: Content[] } = await graphcms.request(getAllQuery("project"));
+      const res: { projects: Content[] } = await graphcms.request(getProjectsQuery);
     return res.projects;
 }
 
 export async function getSingleProject(slug: string) {
-      const res: { project: Content } = await graphcms.request(getSingleQuery("project", slug));
+      const res: { project: Content } = await graphcms.request(getSingleProjectQuery(slug));
     return res.project;
 }
 
 export async function getRecentProjects() {
-      const res: { projects: Content[] } = await graphcms.request(getRecentQuery("project"));
+      const res: { projects: Content[] } = await graphcms.request(getRecentProjectsQuery);
     return res.projects;
 }

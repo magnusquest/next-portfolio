@@ -1,4 +1,3 @@
-import ProjectHero from "@/components/ProjectHero";
 import { getRecentProjects } from "@/services/graphqlClient";
 import Link from "next/link";
 import Card from "@/components/Card";
@@ -18,7 +17,7 @@ export default async function RecentProjects() {
         <hr />
         <div className="sm:flex sm:justify-evenly pt-5">
           {projects.map((project: Content) => (
-            <ProjectHero {...project} key={project.id} />
+            <Card {...project} key={project.id} />
           ))}
         </div>
       </div>
