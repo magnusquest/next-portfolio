@@ -1,13 +1,27 @@
 import Image from "next/image";
 import { Content } from "@/models/types";
 import { getSinglePost } from "@/services/graphqlClient";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+	params
+}: {
+	params: { slug: string };
+}): Promise<Metadata> {
+	const post = await getSinglePost(params.slug);
+	return {
+		title: post.title,
+		description: post.content.html.slice(0, 150)
+	};
+}
 
 export default async function SingleBlogPost({
 	params
 }: {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 }) {
-	const post: Content = await getSinglePost(params.slug);
+	const { slug } = await params;
+	const post: Content = await getSinglePost(slug);
 	return (
 		<div className="flex flex-col items-center justify-center px-6 lg:px-40 py-20 md:mt-12">
 			<h1 className="text-4xl font-bold mb-4">{post.title}</h1>
